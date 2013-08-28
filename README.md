@@ -1,6 +1,8 @@
 good-time
 =========
 
-this my blog
+This is Hpp's Personal Blog.
 
-thx to jekyll
+This site is powered by Jekyll.
+
+The Tree is from verlet-js's example.
