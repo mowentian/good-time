@@ -19,6 +19,7 @@ address, cite, dfn, em, var, i {
 
 ul, ol {
 	list-style: none;
+	color: #666;
 }
 
 fieldset, img {
@@ -164,7 +165,7 @@ a:focus {
 	margin-bottom: 20px;
 }
 
-.cascade-list .item h4 {
+.cascade-list .item h5 {
 	font-size: 16px;
 	color: #666;
 	font-family: arial;

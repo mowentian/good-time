@@ -1,3 +1,5 @@
 name: hpp@good-time
 markdown: redcarpet
 pygments: true
+
+permalink:  date
