@@ -1,5 +1,6 @@
 name: hpp@good-time
-markdown: redcarpet
+#markdown: redcarpet
+markdown: maruku
 pygments: true
 
 permalink:  date

@@ -1,16 +1,19 @@
+{:toc}
 ---
 layout: trancelation
 title:  "Translation of anstrisk in AOSA "
 date:   2013-08-27 06:20:24
 categories: translation
 ---
-#Asterisk
+
+Asterisk
+========
 
 Asterisk 是一个发布在 Gplv2 下的开源的电话软件。简而言之，它是一个提供了打电话、接电话以及定制电话服务的服务软件。
 
 该项目由 Mark Spencer 于1999 年启动。当时，Mark 有一个叫做 Linux Support Services 的公司，并且他需要一个电话系统用于帮助他运作这一贸易。但是，他并没有足够多的钱来购买一个电话服务，所以他决定自己做一个。随着 Asterisk 的流行与发展， Linux Support Services 将其业务转向了 Asterisk，同时公司也更名为 Digium, Inc。
 
-Asterisk 这个名字来源于 Unix 的通配符，\*。这也代表着 Asterisk  项目的目标 —— 支持所有和电话相关的事务。追求这一目标，现在，Asterisk 支持了一大串关于打电话、接电话的技术，包括很多 VoIP（Voice over IP） 协议，从模拟连接与数字连接到传统电话网络，或者是 PSTN（Public Switched Telephone Network）。支持多种类型的电话服务接入，是 Asterisk 的一个主要优势。
+Asterisk 这个名字来源于 Unix 的通配符，*。这也代表着 Asterisk  项目的目标 —— 支持所有和电话相关的事务。追求这一目标，现在，Asterisk 支持了一大串关于打电话、接电话的技术，包括很多 VoIP（Voice over IP） 协议，从模拟连接与数字连接到传统电话网络，或者是 PSTN（Public Switched Telephone Network）。支持多种类型的电话服务接入，是 Asterisk 的一个主要优势。
 
 一旦电话是由 Asterisk 系统接入或者打出的，这里也提供了很多附加功能用于定制这一电话过程。有些功能是大型的、预先完成的通用软件服务，比如 voicemail。同时，其他的小型功能也能够内组合起来用于提供一个定制的声音（电话）软件，比如回放音频文件、读取数字，以及声音识别等等。
 
