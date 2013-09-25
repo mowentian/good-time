@@ -1,136 +1,196 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html style="" class=" js no-touch" lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>hpp@good_time</title>
-		<link rel="stylesheet" type="text/css" href="./css/cascade_index.css">
-		<!-- syntax highlighting CSS -->
-		<link rel="stylesheet" href="./css/syntax.css">
-		<!-- Custom CSS -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HuangPanpan.com</title>
+		<meta name="description" content="This is Hunag Panpan's personal site">
+		<meta name="keywords" content="personal, blog, coding, drawing, translation, resume">
+		<meta name="author" content="Huang Panpan">
 
-		<link rel="stylesheet" href="./css/screen.css" media="screen">
-		
-		<link rel="stylesheet" href="./css/lightbox.css" media="screen">
-		<link rel="stylesheet" href="./css/main.css">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- syntax highlighting CSS -->
+		<link rel="stylesheet" href="./css/jekyll/pygments.css">
+
+		<!-- light box -->
+
+		<link rel="stylesheet" href="./css/lightbox/screen.css" media="screen">
+
+		<link rel="stylesheet" href="./css/lightbox/lightbox.css" media="screen">
+
+		<!-- animationscroll -->
+		<link rel="stylesheet" type="text/css" href="./css/animationscroll/default.css">
+		<link rel="stylesheet" type="text/css" href="./css/animationscroll/component.css">
+		<link rel="stylesheet" type="text/css" href="./css/animationscroll/custom.css?v=21">
+
+		<link rel="stylesheet" type="text/css" href="./css/animationscroll/prism.css">
+
+		<!-- font awesome -->
+		<link href="./css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+		<script src="./js/jquery-1.10.2.min.js"></script>
+
 		<!-- verlet js -->
 		<script type="text/javascript" src="./js/verlet-js/vec2.js"></script>
 		<script type="text/javascript" src="./js/verlet-js/constraint.js"></script>
 		<script type="text/javascript" src="./js/verlet-js/verlet.js"></script>
 		<script type="text/javascript" src="./js/verlet-js/objects.js"></script>
 		<script type="text/javascript" src="./js/tree.js"></script>
-		<!-- light box -->
-		<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
 
+		<!-- light -->
 		<script type="text/javascript" src="./js/modernizr.custom.js"></script>
 		<script type="text/javascript" src="./js/lightbox-2.6.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".zoom").click(function(evt) {
-					evt.stopPropagation();
-					$(this).zoomTo();
-				});
-				$(window).click(function(evt) {
-					evt.stopPropagation();
-					$("body").zoomTo();
-				});
-				$("body").zoomTo();
-			});
-		</script>
+
+		<script src="/js/animatiescroll/animatescroll.js"></script>
 	</head>
 	<body>
-		<div id="wrapper">
-			<div class="cascade-list">
-				<div class="cascade-bd cle" id="waterfall">
-					<div class="item" id="blog">
-						<h3>Blog</h3>
-					</div>
-					<div class="item" id="tranc">
-						<h3>Trans</h3>
+		<div class="container">
+			<header>
+				<h1>HuangPanpan.com <span>I am a nice guy.</span></h1>
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">
+					<ul>
 						<li>
-							<h4><a href="./translation/2013/08/27/translation-of-anstrisk-in-aosa.html">Asterisk</a></h4>
+							<a href="."> <span class="icon"> <i aria-hidden="true" class="icon-home"></i> </span> <span>Blog</span> </a>
 						</li>
 						<li>
-							<h4><a href="./translation/2013/09/24/translation-of-audacity-in-aosa.html">Audacity</a></h4>
+							<a href="#" onclick="$('#section-2').animatescroll();"> <span class="icon"> <i aria-hidden="true" class="icon-web"></i> </span> <span>About</span> </a>
 						</li>
-					</div>
+						<li>
+							<a href="#" onclick="$('#section-3').animatescroll();"> <span class="icon"> <i aria-hidden="true" class="icon-trans"></i> </span> <span>Translations</span> </a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-4').animatescroll();"> <span class="icon"> <i aria-hidden="true" class="icon-artwork"></i> </span> <span>Artwork</span> </a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-5').animatescroll();"> <span class="icon"> <i aria-hidden="true" class="icon-project"></i> </span> <span>Projects</span> </a>
+						</li>
+						<li>
+							<a href="#" onclick="$('#section-6').animatescroll();"> <span class="icon"> <i aria-hidden="true" class="icon-about"></i> </span> <span>Contact</span> </a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="main clearfix">
+			<div id="section-2">
+				<div class="content-wrapper w60 disp-inl-blk">
+					<h1>What is it exactly?</h1>
+				</div>
 
-					<div class="item" id="artwork">
-						<h3>Artwork</h3>
-						<div class="image-row">
-							<div class="image-set">
-								<a class="example-image-link" href="./artwork/girl_1.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/girl_1_small.jpg" alt="" width="70" height="70"></a>
-								<a class="example-image-link" href="./artwork/pen_1.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/pen_1_small.jpg" alt="" width="70" height="70"></a>
+				<div class="content-wrapper w60 disp-inl-blk">
+					{{content}}
+					{{content}}
+					{{content}}
+					{{content}}
+				</div>
 
-								<a class="example-image-link" href="./artwork/jyz.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/jyz_small.jpg" alt="" width="70" height="70"></a>
-								<a class="example-image-link" href="./artwork/sdh.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/sdh_small.jpg" alt="" width="70" height="70"></a>
-
-								<a class="example-image-link" href="./artwork/xsh.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/xsh_small.jpg" alt="" width="70" height="70"></a>
-								<a class="example-image-link" href="./artwork/noface.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/noface_small.jpg" alt="" width="70" height="70"></a>
-
-								<a class="example-image-link" href="./artwork/pen_2.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/pen_2_small.jpg" alt="" width="70" height="70"></a>
-								<a class="example-image-link" href="./artwork/lj.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/lj_small.jpg" alt="" width="70" height="70"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item" id="about">
-						<h3>About</h3>
-						<h4>Me</h4>
-						<h5>Huang Panpan</h5>
-						<p>
-							<a href="mailto:mowencangtian@gmail.com?subject=feedback"><img src="./icon/gmail.png" height="60" alt="Gmail Me"/></a>
-							<a href="https://github.com/mowentian/"><img src="./icon/github_icon.png" height="60" alt="My Github" /></a>
-							<a href="http://weibo.com/u/1862822842"><img src="./icon/weibo.png" height="60" /></a>
-						</p>
-						<h4>Powered By</h4>	
-						<p>
-							<a href="http://www.w3.org/html/logo/"> <img src="./icon/HTML5_1Color_Black.svg" height="64" alt="HTML5 Powered" title="HTML5 Powered"> </a>
-							<a href="http://jekyllrb.com/"> <img src="./icon/logo-2x.png" height="50" alt="jekyll Powered" title="jekyll Powered"/></a>
-						</p>
-						<h4>Licence</h4>
-						<p>
-							<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
-						</p>
-					</div>
-
-					<div class="item" id="project">
-						<h3>Project</h3>
-						<p>
-							<h4>Public</h4>
-						</p>
-						<p>
-							<a href="https://github.com/mowentian/good-time">This Blog</a>
-						</p>
-						<p>
-							<a href="https://github.com/mowentian/qvod_hack">Qvod Cralwer and Hack Work</a>
-						</p>
-						<p>
-							<a href="https://github.com/mowentian/django-c10k-demo">Django-C10k-Demo</a>
-						</p>
-
-						<p>
-							<h4>Private</h4>
-						</p>
-						<p>
-							<a href="https://github.com/evan-gu/shitonly">Friends' ShitOnly Project</a>
-						</p>
-					</div>
-
-					<div class="item" id="hello">
-						{{content}}
-					</div>
-					<div class="item" id="tree">
-						<canvas id="scratch" style="width: 200px; height: 250px;">
+				<div class="content-wrapper w30 fr">
+					<div class="content-wrapper fr">
+						<canvas id="scratch" style="width: 350px; height: 250px;">
 							Browser not supports
 						</canvas>
 					</div>
-
+					<br />
+					<div class="content-wrapper fr">
+						{{content}}
+					</div>
 				</div>
 			</div>
-		</div>
-		<script type="text/javascript" src="./js/cascade_index.js"></script>
-		<script>
-			$('#waterfall').cascade();
-		</script>
+			<div id="section-3">
+
+				<div class="content-wrapper w70">
+					<h1>Translations</h1>
+				</div>
+			</div>
+
+			<div id="section-4">
+				<div class="content-wrapper w70">
+					<h1>Artwork</h1>
+				</div>
+				<div class="image-row">
+					<div class="image-set">
+						<a class="example-image-link" href="./artwork/girl_1.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/girl_1_small.jpg" alt="" width="90" height="90"></a>
+						<a class="example-image-link" href="./artwork/pen_1.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/pen_1_small.jpg" alt="" width="90" height="90"></a>
+
+						<a class="example-image-link" href="./artwork/jyz.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/jyz_small.jpg" alt="" width="90" height="90"></a>
+						<a class="example-image-link" href="./artwork/sdh.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/sdh_small.jpg" alt="" width="90" height="90"></a>
+
+						<a class="example-image-link" href="./artwork/xsh.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/xsh_small.jpg" alt="" width="90" height="90"></a>
+						<a class="example-image-link" href="./artwork/noface.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/noface_small.jpg" alt="" width="90" height="90"></a>
+
+						<a class="example-image-link" href="./artwork/pen_2.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/pen_2_small.jpg" alt="" width="90" height="90"></a>
+						<a class="example-image-link" href="./artwork/lj.jpg" data-lightbox="example-set" title=""><img class="example-image" src="./artwork/lj_small.jpg" alt="" width="90" height="90"></a>
+					</div>
+				</div>
+			</div>
+
+			<div id="section-5">
+				<div class="content-wrapper  w60 disp-inl-blk">
+					<h1>Projects</h1>
+					<p>
+						{{content}}
+						{{content}}
+						{{content}}
+						{{content}}{{content}}
+						{{content}}
+						{{content}}
+						{{content}}
+					</p>
+				</div>
+				<div class="content-wrapper w30 fr" align="right">
+					<div class="download-buttons">
+						<button class="btn" onclick="">
+							Nothing
+						</button>
+						<br>
+						<br>
+						<button class="btn" onclick="">
+							Nothing
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="section-6">
+				<div class="content-wrapper w100 disp-inl-blk">
+					<h1>About</h1>
+					<p>
+						<img src="./icon/gmail.png" height="70" alt="Gmail Me" onclick="window.open('mailto:mowencangtian@gmail.com?subject=feedback')" />
+						<img src="./icon/github_icon.png" height="70" alt="My Github" onclick="window.open('https://github.com/mowentian')" />
+						<img src="./icon/weibo.png" height="70" alt="My Weibo" onclick="window.open('http://weibo.com/u/1862822842')" />
+						<img class="fr" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" height="60" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+						<img class="fr" src="/icon/logo-2x.png" height="60" alt="jekyll Powered" title="jekyll Powered"/ onclick="window.open('http://jekyllrb.com/')">
+					</p>
+				</div>
+				<div align="center" class="content-wrapper w100 disp-inl-blk">
+					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. <div class="content-wrapper w100 disp-inl-blk"></div>
+				</div>
+
+				<script>
+					//  The function to change the class
+					var changeClass = function(r, className1, className2) {
+						var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+						if (regex.test(r.className)) {
+							r.className = r.className.replace(regex, ' ' + className2 + ' ');
+						} else {
+							r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+						}
+						return r.className;
+					};
+
+					//  Creating our button in JS for smaller screens
+					var menuElements = document.getElementById('menu');
+					menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle active" aria-hidden="false"><i aria-hidden="false" class="icon-menu"> </i> Menu</button>');
+
+					//  Toggle the class on click to show / hide the menu
+					document.getElementById('menutoggle').onclick = function() {
+						changeClass(this, 'navtoogle active', 'navtoogle');
+					};
+				</script>
+
 	</body>
 </html>

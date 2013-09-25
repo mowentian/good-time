@@ -1,16 +1,5 @@
-/* line 17, ../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+a
+
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -258,69 +247,3 @@ time, mark, audio, video {
 }
 
 /* -- Responsive design -------------------------------------------------------------- */
-@media only screen and (max-width: 640px) {
-  /* line 247, ../sass/screen.sass */
-  body {
-    margin: 80px 10px 40px 10px;
-    font-size: 14px;
-  }
-
-  /* line 250, ../sass/screen.sass */
-  h1 {
-    font-size: 48px;
-  }
-
-  /* line 252, ../sass/screen.sass */
-  h2 {
-    font-size: 26px;
-  }
-
-  /* line 254, ../sass/screen.sass */
-  h3 {
-    font-size: 16px;
-  }
-
-  /* line 256, ../sass/screen.sass */
-  ol {
-    list-style-position: inside;
-  }
-
-  /* line 258, ../sass/screen.sass */
-  code,
-  kbd,
-  pre,
-  pre code {
-    font-size: 11px;
-  }
-
-  /* line 263, ../sass/screen.sass */
-  .sub-point {
-    font-size: 12px;
-  }
-  /* line 265, ../sass/screen.sass */
-  .sub-point code {
-    font-size: 9px;
-  }
-
-  /* line 267, ../sass/screen.sass */
-  .lead {
-    font-size: 16px;
-  }
-
-  /* line 269, ../sass/screen.sass */
-  .section {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-
-  /* line 272, ../sass/screen.sass */
-  .author {
-    margin-top: -5px;
-    padding-left: 30px;
-  }
-
-  /* line 275, ../sass/screen.sass */
-  .author-links {
-    font-size: 12px;
-  }
-}

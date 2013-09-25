@@ -1,9 +1,8 @@
 ---
 layout: index
-title: hpp@good-time
 ---
 
-{% highlight c %}
+{% highlight c++ linenos %}
 /* Hello World program */
 #include<stdio.h>
 main()
