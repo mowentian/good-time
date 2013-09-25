@@ -157,40 +157,41 @@
 
 			<div id="section-6">
 				<div class="content-wrapper w100 disp-inl-blk">
-					<h1>About</h1>
+					<h1>Contact</h1>
 					<p>
-						<img src="./icon/gmail.png" height="70" alt="Gmail Me" onclick="window.open('mailto:mowencangtian@gmail.com?subject=feedback')" />
+						<img src="./icon/gmail.png" width="70" height="70" alt="Gmail Me" onclick="window.open('mailto:mowencangtian@gmail.com?subject=feedback')" />
 						<img src="./icon/github_icon.png" height="70" alt="My Github" onclick="window.open('https://github.com/mowentian')" />
 						<img src="./icon/weibo.png" height="70" alt="My Weibo" onclick="window.open('http://weibo.com/u/1862822842')" />
-						<img class="fr" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" height="60" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
-						<img class="fr" src="/icon/logo-2x.png" height="60" alt="jekyll Powered" title="jekyll Powered"/ onclick="window.open('http://jekyllrb.com/')">
+
+						<img class="fr" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" height="80" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+						<img class="fr" src="/icon/logo-2x.png" height="80" alt="jekyll Powered" title="jekyll Powered"/ onclick="window.open('http://jekyllrb.com/')">
 					</p>
 				</div>
 				<div align="center" class="content-wrapper w100 disp-inl-blk">
 					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. <div class="content-wrapper w100 disp-inl-blk"></div>
 				</div>
+			</div>
+			<script>
+				//  The function to change the class
+				var changeClass = function(r, className1, className2) {
+					var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+					if (regex.test(r.className)) {
+						r.className = r.className.replace(regex, ' ' + className2 + ' ');
+					} else {
+						r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+					}
+					return r.className;
+				};
 
-				<script>
-					//  The function to change the class
-					var changeClass = function(r, className1, className2) {
-						var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
-						if (regex.test(r.className)) {
-							r.className = r.className.replace(regex, ' ' + className2 + ' ');
-						} else {
-							r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
-						}
-						return r.className;
-					};
+				//  Creating our button in JS for smaller screens
+				var menuElements = document.getElementById('menu');
+				menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle active" aria-hidden="false"><i aria-hidden="false" class="icon-menu"> </i> Menu</button>');
 
-					//  Creating our button in JS for smaller screens
-					var menuElements = document.getElementById('menu');
-					menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle active" aria-hidden="false"><i aria-hidden="false" class="icon-menu"> </i> Menu</button>');
-
-					//  Toggle the class on click to show / hide the menu
-					document.getElementById('menutoggle').onclick = function() {
-						changeClass(this, 'navtoogle active', 'navtoogle');
-					};
-				</script>
+				//  Toggle the class on click to show / hide the menu
+				document.getElementById('menutoggle').onclick = function() {
+					changeClass(this, 'navtoogle active', 'navtoogle');
+				};
+			</script>
 
 	</body>
 </html>
