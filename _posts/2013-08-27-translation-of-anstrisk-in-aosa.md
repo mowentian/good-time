@@ -1,7 +1,7 @@
 ---
-layout: trancelation
-title:  "Translation of anstrisk in AOSA "
-date:   2013-08-27 06:20:24
+layout: translation
+title: "Translation of anstrisk in AOSA "
+date: 2013-08-27
 categories: translation
 ---
 #Asterisk
