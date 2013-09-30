@@ -1,3 +1,10 @@
+---
+layout: blog
+title: "Storm Tutorial"
+date: 2013-09-30
+categories: blog
+---
+
 Storm 指南
 ====
 
@@ -23,9 +30,9 @@ Storm 指南
 
 运行一个 topology 是非常简单的。首先，你将你的代码与以来都打入到一个 jar 中，其次，你按照下面的命令运行：
 
-{%starthighlight bash%}
+```bash
     storm jar all-my-code.jar backtype.storm.MyTopology arg1 arg2
-{%endhighlight%}
+```
 
 这一命令使用参数 arg1 和 arg2 运行了 backtype.storm.MyTopology 的这个类。在这个类的 main 函数中定义了这个 topology 并且将其传递给 Nimbus。而 storm jar 部分将连接上 Nimbus 并且把包上传上去。
 
@@ -78,7 +85,7 @@ Storm 使用了元组来作为它的数据模型。一个元组是一个具有�
     }
 ```
 
-这里的 declareOutputFields 函数，给这个组件定义了输出域：“["double", "triple"]”。在这个 bolt 中其他部分会在下面解释。
+这里的 declareOutputFields 函数，给这个组件定义了输出域：\["double", "triple"\]。在这个 bolt 中其他部分会在下面解释。
 
 # 一个简单 topology
 
@@ -93,7 +100,7 @@ Storm 使用了元组来作为它的数据模型。一个元组是一个具有�
             .shuffleGrouping("exclaim1");
 ```
 
-这个 topology 包括了一个 spout 和两个 bolt。spout 产生单词，而每个 bolt 在后面追加 "!!!"；而这些节点使用了一条线连接起来。首先运行第一个 bolt，其次运行第二个 bolt。比如在 spout 中输入元组 ["bob"] 和 ["john"]，那么在第二个 bolt 中输出的是 ["bob!!!!!!"] 和 ["john!!!!!!"]。
+这个 topology 包括了一个 spout 和两个 bolt。spout 产生单词，而每个 bolt 在后面追加 "!!!"；而这些节点使用了一条线连接起来。首先运行第一个 bolt，其次运行第二个 bolt。比如在 spout 中输入元组 \["bob"\] 和 \["john"\]，那么在第二个 bolt 中输出的是 \["bob!!!!!!"\] 和 \["john!!!!!!"\]。
 
 这段代码使用 “setSpout” 和 “setBolt” 来定义了节点。这些函数使用了一个用户定义的 id，一个具有处理逻辑的实体，以及你需要这些节点处理的并行数目。在这个例子上，这个 spout 具有 id 为 “word”，而其他的 blots 分别是 "exclaim1" 和 "exclaim2"。
 
@@ -113,7 +120,7 @@ setBolt 返回了一个  InputDeclarer 实体用于定义给 Bolt 的输入。�
 
 正如你所见的，输入定义能够被串联起来用于支持多种 Bolt 的数据源。
 
-让我们深入看看 spout 和 bolt 在 topology 中的实现。Spouts 用于将新的消息引入到 topology 中。在这个 topology 中的 TestWordSpout 每隔 100ms 组织一个在  ["nathan", "mike", "jackson", "golda", "bertels"]  中的随机的文字作为一个 1元素元组。在这里的 nextTuple 的实现方式如下：
+让我们深入看看 spout 和 bolt 在 topology 中的实现。Spouts 用于将新的消息引入到 topology 中。在这个 topology 中的 TestWordSpout 每隔 100ms 组织一个在 "["nathan", "mike", "jackson", "golda", "bertels"]"  中的随机的文字作为一个 1元素元组。在这里的 nextTuple 的实现方式如下：
 
 ```java
     public void nextTuple() {
