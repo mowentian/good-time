@@ -1,0 +1,164 @@
+!!! 5
+html.js.no-touch(style='', lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title HuangPanpan.com
+    meta(name='description', content='This is Hunag Panpan"s personal site')
+    meta(name='keywords', content='personal, blog, coding, drawing, translation, resume')
+    meta(name='author', content='Huang Panpan')
+    link(rel='shortcut icon', href='images/favicon.ico')
+    // syntax highlighting CSS
+    link(rel='stylesheet', href='./css/jekyll/pygments.css')
+    // light box
+    link(rel='stylesheet', href='./css/lightbox/screen.css', media='screen')
+    link(rel='stylesheet', href='./css/lightbox/lightbox.css', media='screen')
+    // animationscroll
+    link(rel='stylesheet', type='text/css', href='./css/animationscroll/default.css')
+    link(rel='stylesheet', type='text/css', href='./css/animationscroll/component.css')
+    link(rel='stylesheet', type='text/css', href='./css/animationscroll/custom.css?v=21')
+    link(rel='stylesheet', type='text/css', href='./css/animationscroll/prism.css')
+    // font awesome
+    link(href='./css/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    script(src='./js/jquery-1.10.2.min.js')
+    // verlet js
+    script(type='text/javascript', src='./js/verlet-js/vec2.js')
+    script(type='text/javascript', src='./js/verlet-js/constraint.js')
+    script(type='text/javascript', src='./js/verlet-js/verlet.js')
+    script(type='text/javascript', src='./js/verlet-js/objects.js')
+    script(type='text/javascript', src='./js/tree.js')
+    // light
+    script(type='text/javascript', src='./js/modernizr.custom.js')
+    script(type='text/javascript', src='./js/lightbox-2.6.min.js')
+    script(src='/js/animatiescroll/animatescroll.js')
+  body
+    .container
+      header
+        h1
+          | HuangPanpan.com
+          span I am a nice guy.
+      .main.clearfix
+        nav#menu.nav
+          ul
+            li
+              a(href='.')
+                span.icon
+                  i.icon-home(aria-hidden='true')
+                span Blog
+            li
+              a(href='#', onclick='$("#section-2").animatescroll();')
+                span.icon
+                  i.icon-web(aria-hidden='true')
+                span About
+            li
+              a(href='#', onclick='$("#section-3").animatescroll();')
+                span.icon
+                  i.icon-trans(aria-hidden='true')
+                span Translations
+            li
+              a(href='#', onclick='$("#section-4").animatescroll();')
+                span.icon
+                  i.icon-artwork(aria-hidden='true')
+                span Artwork
+            li
+              a(href='#', onclick='$("#section-5").animatescroll();')
+                span.icon
+                  i.icon-project(aria-hidden='true')
+                span Projects
+            li
+              a(href='#', onclick='$("#section-6").animatescroll();')
+                span.icon
+                  i.icon-about(aria-hidden='true')
+                span Contact
+    .main.clearfix
+      #section-2
+        .content-wrapper.w60.disp-inl-blk
+          h1 What is it exactly?
+        .content-wrapper.w60.disp-inl-blk
+          | {{content}}
+          | {{content}}
+          | {{content}}
+          | {{content}}
+        .content-wrapper.w30.fr
+          .content-wrapper.fr
+            canvas#scratch
+              | Browser not supports
+          br
+          .content-wrapper.fr
+            | {{content}}
+      #section-3
+        .content-wrapper.w70
+          h1 Translations
+      #section-4
+        .content-wrapper.w70
+          h1 Artwork
+        .image-row
+          .image-set
+            a.example-image-link(href='./artwork/girl_1.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/girl_1_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/pen_1.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/pen_1_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/jyz.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/jyz_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/sdh.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/sdh_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/xsh.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/xsh_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/noface.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/noface_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/pen_2.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/pen_2_small.jpg', alt='', width='90', height='90')
+            a.example-image-link(href='./artwork/lj.jpg', data-lightbox='example-set', title='')
+              img.example-image(src='./artwork/lj_small.jpg', alt='', width='90', height='90')
+      #section-5
+        .content-wrapper.w60.disp-inl-blk
+          h1 Projects
+          p
+            | {{content}}
+            | {{content}}
+            | {{content}}
+            | {{content}}{{content}}
+            | {{content}}
+            | {{content}}
+            | {{content}}
+        .content-wrapper.w30.fr(align='right')
+          .download-buttons
+            button.btn(onclick='')
+              | Nothing
+            br
+            br
+            button.btn(onclick='')
+              | Nothing
+      #section-6
+        .content-wrapper.w100.disp-inl-blk
+          h1 Contact
+          p
+            img(src='./icon/gmail.png', width='70', height='70', alt='Gmail Me', onclick='window.open("mailto:mowencangtian@gmail.com?subject=feedback")')
+            img(src='./icon/github_icon.png', height='70', alt='My Github', onclick='window.open("https://github.com/mowentian")')
+            img(src='./icon/weibo.png', height='70', alt='My Weibo', onclick='window.open("http://weibo.com/u/1862822842")')
+            img.fr(src='http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png', height='80', alt='HTML5 Powered with CSS3 / Styling, and Semantics', title='HTML5 Powered with CSS3 / Styling, and Semantics')
+            img.fr(src='/icon/logo-2x.png', height='80', alt='jekyll Powered', title='jekyll Powered', onclick='window.open("http://jekyllrb.com/")')
+        .content-wrapper.w100.disp-inl-blk(align='center')
+          | This work is licensed under a
+          a(rel='license', href='http://creativecommons.org/licenses/by-sa/3.0/') Creative Commons Attribution-ShareAlike 3.0 Unported License
+          | .
+          .content-wrapper.w100.disp-inl-blk
+      script
+        //  The function to change the class
+        var changeClass = function(r, className1, className2) {
+        var regex = new RegExp("(?:^|\\\s+)" + className1 + "(?:\\s+|$)");
+        if (regex.test(r.className)) {
+        r.className = r.className.replace(regex, ' ' + className2 + ' ');
+        } else {
+        r.className = r.className.replace(new RegExp("(?:^|\\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+        }
+        return r.className;
+        };
+        //  Creating our button in JS for smaller screens
+        var menuElements = document.getElementById('menu');
+        menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle active" aria-hidden="false"><i aria-hidden="false" class="icon-menu"> </i> Menu</button>');
+        //  Toggle the class on click to show / hide the menu
+        document.getElementById('menutoggle').onclick = function() {
+        changeClass(this, 'navtoogle active', 'navtoogle');
+        };
